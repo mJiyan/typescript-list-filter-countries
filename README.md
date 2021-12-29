@@ -29,7 +29,7 @@ Also Dockerized all applications.
 
 A short overview of the project
 
-![GIF](./.gif)
+![GIF](./countries.gif)
 
 ## Installation
 ### with Docker
