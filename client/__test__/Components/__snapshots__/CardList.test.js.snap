@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`rendering cardList components it should match with the snapshot 1`] = `
+<div
+  className="
+        grid xl:grid-cols-4 lg:grid-cols-4  md:grid-cols-2  sm:grid-cols-1  xs:grid-cols-1 justify-items-center 
+        xl:pt-10 lg:pt-10 md:pt-10 sm:pt-0 xs:pt-0 px-10 
+    "
+>
+  <a
+    className="rounded-md overflow-hidden shadow-lg bg-WhiteDark dark:bg-DarkBlue h-96 w-80 cursor-pointer
+                xl:mb-20 lg:mb-20 md:mb-20 sm:mb-10 xl:mb-10"
+    href="/name/BEL"
+    onClick={[Function]}
+  >
+    <img
+      className="object-cover w-full h-44"
+      src="https://flagcdn.com/be.svg"
+    />
+    <div
+      className="flex flex-col items-start justify-start h-full p-8"
+    >
+      <p
+        className="text-orange-600 text-lg pb-4 font-bold"
+      >
+         
+        Belgium
+      </p>
+      <div
+        className="flex flex-col items-start justify-end"
+      >
+        <p
+          className="text-base"
+        >
+          <span
+            className="font-normal"
+          >
+            Population: 
+          </span>
+           
+          11,555,997
+        </p>
+        <p
+          className="text-base"
+        >
+          <span
+            className="font-normal"
+          >
+            Region: 
+          </span>
+           
+          Europe
+        </p>
+        <p
+          className="text-base"
+        >
+          <span
+            className="font-normal"
+          >
+            Capital: 
+          </span>
+           
+          Brussels
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+`;
