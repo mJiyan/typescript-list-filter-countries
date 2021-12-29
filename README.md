@@ -34,20 +34,20 @@ A short overview of the project
 ## Installation
 ### with Docker
 ```sh
-git clone https://github.com/mJiyan/
-cd typescript-countries
+git clone https://github.com/mJiyan/typescript-list-filter-countries.git
+cd typescript-list-filter-countries
 docker-compose up --build
 -> Open your browser at http://0.0.0.0:8080 
 ```
 
 ### manually
 ```sh
-git clone https://github.com/mJiyan/
-cd typescript-countries/server
+git clone https://github.com/mJiyan/typescript-list-filter-countries.git
+cd typescript-list-filter-countries/server
 yarn
 yarn start
 
-cd typescript-countries/client
+cd typescript-list-filter-countries/client
 yarn
 yarn start
 Open your browser at http://0.0.0.0:8080 
@@ -56,12 +56,12 @@ Open your browser at http://0.0.0.0:8080
 
 ## Test
 ```sh
-git clone https://github.com/mJiyan/
-cd typescript-countries/server
+git clone https://github.com/mJiyan/typescript-list-filter-countries.git
+cd typescript-list-filter-countries/server
 yarn
 yarn test
 
-cd typescript-countries/client
+cd typescript-list-filter-countries/client
 yarn
 yarn test
 ```
@@ -210,9 +210,9 @@ yarn test
 
 ## Support
 
-Please [open an issue](https://github.com/mJiyan/typescript-countries/issues) for support & suggestions.
+Please [open an issue](https://github.com/mJiyan/typescript-list-filter-countries/issues) for support & suggestions.
 
 
 ## Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/mJiyan/typescript-countries/compare).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/mJiyan/typescript-list-filter-countries/compare).
