@@ -70,11 +70,6 @@ yarn test
 ## Structure
 ```
 ├─ client
-│   ├─ __test__
-│   │  ├─ setup
-│   │  │  └─ setupTest.js
-│   │  ├─ Components
-│   │  └─ Mock
 │   ├─ .huksy
 │   │  ├─ pre-commit
 │   │  └─ pre-push
@@ -86,77 +81,166 @@ yarn test
 │   │  │  └─ style
 │   │  │     └─ tailwind.css
 │   │  │
-│   │  ├─ components
-│   │  │  ├─ BackButton
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ BorderCountry
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ BorderCountryList
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Card
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ CardList
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ CountryDetails
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ CountryInformations
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Filter
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Flag
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Header
-│   │  │  │  └─ index.tsx
-│   │  │  └─ index.tsx
-│   │  │
-│   │  ├─ models
-│   │  │  ├─ BorderCountry
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ BorderCountryList
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Card
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ CardList
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Countries
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Country
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ CountryDetails
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ CountryInformations
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Filter
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Flag
-│   │  │  │  └─ index.tsx
-│   │  │  └─ index.tsx
-│   │  │
 │   │  ├─ config
 │   │  │  └─ routes.ts
 │   │  │
+│   │  ├─ containers
+│   │  │  ├─ CountryCardListContainer
+│   │  │  │  ├─ CountryCardListContainer.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ CountryInformationContainer
+│   │  │  │  ├─ CountryInformationContainer.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ FilterContainer
+│   │  │  │  ├─ FilterContainer.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ PreviousPageContainer
+│   │  │  │  ├─ PreviousPageContainer.tsx
+│   │  │  │  └─ index.ts
+│   │  │  └─ index.ts
+│   │  │
+│   │  ├─ modules
+│   │  │  ├─ BackButton
+│   │  │  │  ├─ BackButton.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ CountryCard
+│   │  │  │  ├─ CountryCard.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ CountryInformation
+│   │  │  │  ├─ CountryInformation.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ Flag
+│   │  │  │  ├─ Flag.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ Header
+│   │  │  │  ├─ Header.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ Regions
+│   │  │  │  ├─ Regions.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ Search
+│   │  │  │  ├─ Search.tsx
+│   │  │  │  └─ index.ts
+│   │  │  └─ index.ts
+│   │  │
+│   │  ├─ pages
+│   │  │  ├─ country-details
+│   │  │  │  ├─ hooks
+│   │  │  │  │  ├─ useGetCountryDetails
+│   │  │  │  │  │  └─ useGetCountryDetails.ts
+│   │  │  │  │  └─ index.ts
+│   │  │  │  ├─ templates
+│   │  │  │  │  ├─ MainTemplate
+│   │  │  │  │  │  ├─ MainTemplate.tsx
+│   │  │  │  │  │  └─ index.ts
+│   │  │  │  │  └─ index.ts
+│   │  │  │  ├─ CountryDetailsPage.tsx
+│   │  │  │  └─ index.ts
+│   │  │  │
+│   │  │  ├─ country-list
+│   │  │  │  ├─ hooks
+│   │  │  │  │  ├─ useGetCountryList
+│   │  │  │  │  │  └─ useGetCountryList.ts
+│   │  │  │  │  └─ index.ts
+│   │  │  │  ├─ templates
+│   │  │  │  │  ├─ MainTemplate
+│   │  │  │  │  │  ├─ MainTemplate.tsx
+│   │  │  │  │  │  └─ index.ts
+│   │  │  │  │  ├─ SecondTemplate
+│   │  │  │  │  │  ├─ SecondTemplate.tsx
+│   │  │  │  │  │  └─ index.ts
+│   │  │  │  │  └─ index.ts
+│   │  │  │  ├─ CountryListPage.tsx
+│   │  │  │  └─ index.ts
+│   │  │  └─ index.ts
+│   │  │
 │   │  ├─ redux
 │   │  │  ├─ actions
-│   │  │  │  └─ Country
-│   │  │  │     ├─ index.ts
-│   │  │  │     └─ types.ts
-│   │  │  └─ reducers     
+│   │  │  │  ├─ Country
+│   │  │  │  │  ├─ index.ts
+│   │  │  │  │  └─ types.ts
+│   │  │  │  └─ index.ts
+│   │  │  └─ reducers
 │   │  │     ├─ Country
 │   │  │     │   └─ index.ts
 │   │  │     └─ index.ts
 │   │  │
 │   │  ├─ services
 │   │  │  ├─ api.ts
-│   │  │  ├─ utils.ts
-│   │  │  └─ constants.ts
+│   │  │  ├─ const.ts
+│   │  │  └─ index.ts
 │   │  │
-│   │  ├─ views
-│   │  │  ├─ Countries
-│   │  │  │  └─ index.tsx
-│   │  │  ├─ Country
-│   │  │  │  └─ index.tsx
-│   │  │  └─ index.tsx
+│   │  ├─ shared
+│   │  │  ├─ storage
+│   │  │  │  └─ themeLocalStorage.tsx
+│   │  │  ├─ const.ts
+│   │  │  ├─ types.ts
+│   │  │  └─ utils.ts
 │   │  │
+│   │  ├─ ui-library
+│   │  │  ├─ BorderCountryWrapper
+│   │  │  │  ├─ BorderCountryWrapper.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ Box
+│   │  │  │  ├─ Box.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ Button
+│   │  │  │  ├─ Button.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ CountryCardListWrapper
+│   │  │  │  ├─ CountryCardListWrapper.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ CountryDetailsWrapper
+│   │  │  │  ├─ CountryDetailsWrapper.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ CountryInformationDetailsWrapper
+│   │  │  │  ├─ CountryInformationDetailsWrapper.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ CountryInformationTextWrapper
+│   │  │  │  ├─ CountryInformationTextWrapper.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ CountryInformationWrapper
+│   │  │  │  ├─ CountryInformationWrapper.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ FilterWrapper
+│   │  │  │  ├─ FilterWrapper.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ FlagBox
+│   │  │  │  ├─ FlagBox.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ FlagImageBox
+│   │  │  │  ├─ FlagImageBox.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ HeaderTitle
+│   │  │  │  ├─ HeaderTitle.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ HeaderWrapper
+│   │  │  │  ├─ HeaderWrapper.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ icons
+│   │  │  │  ├─ ArrowBackIcon
+│   │  │  │  │  ├─ ArrowBackIcon.tsx
+│   │  │  │  │  └─ index.ts
+│   │  │  │  ├─ ArrowDownIcon
+│   │  │  │  │  ├─ ArrowDownIcon.tsx
+│   │  │  │  │  └─ index.ts
+│   │  │  │  ├─ DarkMoonIcon
+│   │  │  │  │  ├─ DarkMoonIcon.tsx
+│   │  │  │  │  └─ index.ts
+│   │  │  │  ├─ LightMoonIcon
+│   │  │  │  │  ├─ LightMoonIcon.tsx
+│   │  │  │  │  └─ index.ts
+│   │  │  │  ├─ SearchIcon
+│   │  │  │  │  ├─ SearchIcon.tsx
+│   │  │  │  │  └─ index.ts
+│   │  │  │  └─ index.ts
+│   │  │  ├─ PreviousPageWrapper
+│   │  │  │  ├─ PreviousPageWrapper.tsx
+│   │  │  │  └─ index.ts
+│   │  │  ├─ Text
+│   │  │  │  ├─ Text.tsx
+│   │  │  │  └─ index.ts
+│   │  │  └─ index.ts
 │   │  ├─ react-app-env.d.ts
 │   │  ├─ App.tsx
 │   │  ├─ index.tsx

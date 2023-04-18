@@ -1,10 +1,20 @@
 import axios from 'axios';
-import { HTTP, endPoint, MaxReviewFileSize } from './constants';
 
+import { Maybe } from 'src/shared/types';
 
-const apiCall = async (url: string = '', data: any = null, params: any = null, method: any = HTTP.GET, headers = {}) =>
+import { HTTP, COUNTRY_END_POINT, MaxReviewFileSize } from './const';
+
+type CountryApiCallType = {
+  url: string,
+  data: Maybe<string>,
+  params: Maybe<string>,
+  method: HTTP,
+  headers: any
+}
+
+const apiCall = async ({ url = '', data = null, params = null, method = HTTP.GET, headers }: CountryApiCallType) =>
   axios({
-    url: `${endPoint}${url}`,
+    url: `${COUNTRY_END_POINT}${url}`,
     data,
     params,
     method,
@@ -19,5 +29,3 @@ const apiCall = async (url: string = '', data: any = null, params: any = null, m
     });
 
 export default apiCall;
-
-//declared the axios here with the configuration. in order to make the readability easier at project

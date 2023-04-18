@@ -65,6 +65,8 @@ module.exports = function (_env, argv) {
     },
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      alias: { src: path.resolve(__dirname, './src') },
+      modules: [path.resolve(__dirname, './src'), 'node_modules'],
     },
     plugins: [
       isProduction &&

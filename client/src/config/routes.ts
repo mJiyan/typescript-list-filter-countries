@@ -1,9 +1,18 @@
-import { Countries, Country } from '../views';
-import IRoute from '../models/route';
+import { CountryDetailsPage, CountryListPage } from 'src/pages';
 
-const routes: IRoute[] = [
-    { path: '/', name: "Country List Page", component: Countries, exact: true },
-    { path: '/name/:name', name: "Country Detail Page", component: Country, exact: true },
+type RouteProps = {
+    path: string;
+    name: string;
+    exact: boolean;
+    component: any;
+    props?: any;
+}
+
+const routes: RouteProps[] = [
+    { path: '/', name: "Country List Page", component: CountryListPage, exact: true },
+    { path: '/:templateName', name: "Country List Page", component: CountryListPage, exact: true },
+    { path: '/name/:name', name: "Country Detail Page", component: CountryDetailsPage, exact: true },
+    { path: '/:templateName/name/:name', name: "Country Detail Page", component: CountryDetailsPage, exact: true },
 ];
 
 export default routes;

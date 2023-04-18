@@ -1,7 +1,6 @@
-import React from 'react';
 import { Router, Route, Switch, RouteComponentProps } from 'react-router-dom';
 import routes from './config/routes';
-import { Header } from './components';
+import { Header } from './modules';
 import { history } from './Store'
 
 const App = () => {

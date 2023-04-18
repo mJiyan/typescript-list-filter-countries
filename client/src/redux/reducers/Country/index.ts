@@ -1,5 +1,6 @@
+import { CountryType, CountriesType } from 'src/shared/types';
+
 import {
-    CountryType,
     CountryDispatchTypes,
     COUNTRIES_SUCCESS,
     COUNTRY_SUCCESS,
@@ -13,7 +14,7 @@ export interface DefaultStateI {
     loading: boolean;
     countryName?: CountryType;
     country?: CountryType;
-    countries?: Array<CountryType>;
+    countries?: CountriesType;
     error?: boolean;
 }
 
@@ -40,7 +41,6 @@ const countryReducer = (
             return {
                 loading: false,
                 countries: action.payload,
-                
             };
         case COUNTRY_SUCCESS:
             return {
