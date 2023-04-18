@@ -7,7 +7,7 @@ import {
     COUNTRY_NAME_SUCCESS,
     COUNTRIES_FAIL,
     COUNTRIES_LOADING,
-} from '../../actions/Country/types';
+} from 'src/redux/actions/Country/types';
 
 
 export interface DefaultStateI {
