@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { numberWithCommas } from 'src/shared/utils';
 import { CountryType } from 'src/shared/types';
 
-type CountryCardProps = Pick<CountryType, "name" | "population" | "region" | "capital" | "flag" | "alpha3Code">
+export type CountryCardProps = Pick<CountryType, "name" | "population" | "region" | "capital" | "flag" | "alpha3Code">
 
 const CountryCard: React.FC<CountryCardProps> = ({ name, population, region, capital, flag, alpha3Code }) => (
   <Link

@@ -4,7 +4,7 @@ import { getThemeColorConfig, setThemeColorConfig } from 'src/shared/storage/the
 import { ThemeColorsEnum } from 'src/shared/const';
 
 
-export const changeAppColorConfig = () => {
+const useChangeAppColorConfig = () => {
     const [theme, setTheme] = useState<ThemeColorsEnum>(ThemeColorsEnum.LIGHT);
   
     useEffect(() => {
@@ -19,7 +19,7 @@ export const changeAppColorConfig = () => {
       }
     }, [])
   
-    const darkMode = () => {
+    const toggleAppColor = () => {
       if (theme === ThemeColorsEnum.LIGHT) {
         document.documentElement.classList.add(ThemeColorsEnum.DARK);
         setThemeColorConfig(ThemeColorsEnum.DARK)
@@ -32,7 +32,9 @@ export const changeAppColorConfig = () => {
     };
 
     return {
-        darkMode,
+        toggleAppColor,
         theme
     }
 }
+
+export default useChangeAppColorConfig;

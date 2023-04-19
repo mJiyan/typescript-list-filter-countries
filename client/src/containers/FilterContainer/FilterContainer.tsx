@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { SearchAndFilterCountriesProps } from 'src/pages/country-list/utils';
+import { UseSearchAndFilterCountriesProps } from 'src/pages/country-list/hooks/useSearchAndFilterCountries';
 import { Regions, Search } from "src/modules";
 import { FilterWrapper } from 'src/ui-library';
 
-type FilterProps = Omit<SearchAndFilterCountriesProps, "countryStates">
+export type FilterProps = Omit<UseSearchAndFilterCountriesProps, "countryStates">
 
 const FilterContainer: React.FC<FilterProps> = ({ search, setRegion }) => (
   <FilterWrapper>
@@ -13,4 +13,4 @@ const FilterContainer: React.FC<FilterProps> = ({ search, setRegion }) => (
   </FilterWrapper>
 )
 
-export default FilterContainer
+export default FilterContainer;

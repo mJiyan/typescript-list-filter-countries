@@ -1,8 +1,7 @@
 import { Maybe } from 'src/shared/types';
 import { CountryListPageTemplates } from 'src/shared/const';
 
-import { useGetCountryList } from './hooks';
-import { searchAndFilterCountries } from './utils';
+import { useGetCountryList, useSearchAndFilterCountries } from './hooks';
 import { MainTemplate, SecondTemplate } from "./templates"
 
 export type CountryListPageProps = {
@@ -16,7 +15,7 @@ export type CountryListPageProps = {
 const CountryListPage: React.FC<CountryListPageProps> = (props) => {
   const templateName = props?.match?.params?.templateName?.toLowerCase();
   const countries = useGetCountryList();
-  const { countryStates, search, setRegion } = searchAndFilterCountries (countries);
+  const { countryStates, search, setRegion } = useSearchAndFilterCountries (countries);
 
   const setTemplate = (template: Maybe<string>) => {
     switch(template) {

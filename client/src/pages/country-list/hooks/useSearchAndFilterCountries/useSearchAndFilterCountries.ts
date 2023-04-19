@@ -2,28 +2,26 @@ import { useEffect, useState, ChangeEvent } from 'react';
 
 import { CountriesType } from 'src/shared/types';
 
-export interface SearchAndFilterCountriesProps {
+export interface UseSearchAndFilterCountriesProps {
     countryStates: CountriesType | undefined
     search: (event: ChangeEvent<HTMLInputElement>) => void
     setRegion: (region: string) => void
 }
 
-export const searchAndFilterCountries = (countries: CountriesType | undefined): SearchAndFilterCountriesProps => {
+const useSearchAndFilterCountries = (countries: CountriesType | undefined): UseSearchAndFilterCountriesProps => {
     const [searchTerm, setSearchTerm] = useState<string>('');
     const [countryStates, setCountryStates] = useState<CountriesType>();
     const [filterByRegion, setFilterByRegion] = useState<string>('');
   
-  
     const search = (event: ChangeEvent<HTMLInputElement>) => setSearchTerm(event.target.value);
-  
-    const setRegion = (region: string) => setFilterByRegion(region)
+    const setRegion = (region: string) => setFilterByRegion(region);
   
     useEffect(() => {
       let filteredCountries: CountriesType | undefined = countries?.filter((country) => {
-        if (searchTerm == '' && filterByRegion == '') {
+        if (!searchTerm && !filterByRegion) {
           return countries;
         } else if (
-          filterByRegion !== ''
+          filterByRegion 
               ? country.name.toLowerCase().includes(searchTerm.toLowerCase()) && country.region == filterByRegion 
               : country.name.toLowerCase().includes(searchTerm.toLowerCase())
         ) {
@@ -39,3 +37,5 @@ export const searchAndFilterCountries = (countries: CountriesType | undefined): 
         setRegion,
     }
 }
+
+export default useSearchAndFilterCountries;

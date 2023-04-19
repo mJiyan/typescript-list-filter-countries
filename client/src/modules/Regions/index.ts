@@ -1,1 +1,1 @@
-export { default } from "./Regions";
+export { default, type RegionsProps } from "./Regions";

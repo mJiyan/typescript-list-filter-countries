@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import { RegionsProps } from './Regions';
+import { RegionsProps } from 'src/modules/Regions';
 
-export const updateDropDownModule = ({ setRegion }: RegionsProps) => {
+const useUpdateDropDownModule = ({ setRegion }: RegionsProps) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [title, setTitle] = useState<string>('Filter by Region');
   
@@ -21,3 +21,5 @@ export const updateDropDownModule = ({ setRegion }: RegionsProps) => {
         toggleDropDown,
     }
 }
+
+export default useUpdateDropDownModule

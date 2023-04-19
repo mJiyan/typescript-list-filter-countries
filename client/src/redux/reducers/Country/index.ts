@@ -10,23 +10,22 @@ import {
 } from 'src/redux/actions/Country/types';
 
 
-export interface DefaultStateI {
+export interface DefaultState {
     loading: boolean;
-    countryName?: CountryType;
     country?: CountryType;
     countries?: CountriesType;
     error?: boolean;
 }
 
-const defaultState: DefaultStateI = {
+export const defaultState: DefaultState = {
     loading: false,
     error: false
 };
 
 const countryReducer = (
-    state: DefaultStateI = defaultState,
+    state: DefaultState = defaultState,
     action: CountryDispatchTypes,
-): DefaultStateI => {
+): DefaultState => {
     switch (action.type) {
         case COUNTRIES_FAIL:
             return {
@@ -56,6 +55,5 @@ const countryReducer = (
             return state;
     }
 };
-
 
 export default countryReducer;

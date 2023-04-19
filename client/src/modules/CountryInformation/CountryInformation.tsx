@@ -4,7 +4,7 @@ import { CountryType } from 'src/shared/types';
 
 import { CountryInformationText, BorderCountryList } from "./components"
 
-type CountryInformationModuleProps = Omit<CountryType, "flag" | "alpha3Code">
+export type CountryInformationModuleProps = Omit<CountryType, "flag" | "alpha3Code">
 
 const CountryInformation = ({
   name,

@@ -1,13 +1,13 @@
 import { FilterContainer, CountryCardListContainer } from 'src/containers';
 import { CountriesType } from 'src/shared/types';
 
-export type SecondTemplate = {
+export type SecondTemplateProps = {
   search: (event: React.ChangeEvent<HTMLInputElement>) => void
   setRegion: (region: string) => void
   countryList: CountriesType | undefined
 }
 
-const SecondTemplate = ({ search, setRegion, countryList}: SecondTemplate) => (
+const SecondTemplate = ({ search, setRegion, countryList}: SecondTemplateProps) => (
     <>
       <p className='flex justify-center w-full'>SecondTemplate</p>
       <FilterContainer search={search} setRegion={setRegion} />

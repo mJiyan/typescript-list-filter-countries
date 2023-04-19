@@ -2,7 +2,7 @@ import { CountryInformationDetailsWrapper } from 'src/ui-library';
 import { CountryType } from 'src/shared/types';
 import { CountryInformation, Flag } from 'src/modules';
 
-type CountryInformationContainerProps = Omit<CountryType, "alpha3Code">
+export type CountryInformationContainerProps = Omit<CountryType, "alpha3Code">
 
 const CountryInformationContainer = ({
     name,

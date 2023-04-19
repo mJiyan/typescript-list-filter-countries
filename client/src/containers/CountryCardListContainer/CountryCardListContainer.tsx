@@ -1,9 +1,12 @@
 import { CountryCard } from "src/modules"
 import { CountryCardListWrapper } from "src/ui-library";
-import { CountryType, CountriesType } from 'src/shared/types';
+import { CountriesType } from 'src/shared/types';
 
+export type CountryCardListContainerProps = {
+  countryList: CountriesType | undefined
+}
 
-const CountryCardListContainer = ({ countryList }: { countryList: CountriesType | undefined }) => (
+const CountryCardListContainer = ({ countryList }: CountryCardListContainerProps) => (
   <CountryCardListWrapper>
     {countryList &&
       countryList.map((country) => (

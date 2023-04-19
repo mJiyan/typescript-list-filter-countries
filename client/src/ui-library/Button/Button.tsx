@@ -1,8 +1,8 @@
 import { UIComponentProp } from "src/shared/types";
 
-type ButtonProps = UIComponentProp & { type?: "button" | "submit" | "reset",  onClick?: () => void }
+type ButtonProps = UIComponentProp & { type?: "button" | "submit" | "reset",  onClick?: () => void, dataTestId?: string }
 
-const Button: React.FC<ButtonProps> = ({ children, type, props, onClick }) => (
+const Button: React.FC<ButtonProps> = ({ children, type, props, onClick, dataTestId }) => (
     <button
         type={type}
         className={`
@@ -15,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({ children, type, props, onClick }) => (
             shadow-lg 
             relative ${props}`}
         onClick={onClick}
+        data-testid={dataTestId}
     >
         {children}
     </button>

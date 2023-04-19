@@ -1,7 +1,7 @@
 import { FlagBox, FlagImageBox } from 'src/ui-library';
 import { CountryType } from 'src/shared/types';
 
-type FlagProps = Pick<CountryType, "flag">
+export type FlagProps = Pick<CountryType, "flag">
 
 const Flag = ({ flag }: FlagProps) => (
     <FlagBox>

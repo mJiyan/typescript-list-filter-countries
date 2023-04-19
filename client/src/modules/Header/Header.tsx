@@ -1,13 +1,13 @@
 import { ThemeColorsEnum } from 'src/shared/const';
 import { DarkMoonIcon, LightMoonIcon, HeaderTitle, Text, HeaderWrapper } from 'src/ui-library';
 
-import { changeAppColorConfig } from './utils';
+import { useChangeAppColorConfig } from './hooks';
 
 const Header = () => {
   const {
-    darkMode,
+    toggleAppColor,
     theme
-  } = changeAppColorConfig();
+  } = useChangeAppColorConfig();
 
   return (
       <HeaderWrapper>
@@ -15,7 +15,7 @@ const Header = () => {
           <button
             className="flex flex-cols font-bold text-sm tracking-tight"
             data-testid="dark-mode"
-            onClick={darkMode}
+            onClick={toggleAppColor}
           >
             {theme === ThemeColorsEnum.DARK ? (
               <>

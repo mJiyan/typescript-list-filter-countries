@@ -19,8 +19,6 @@ export type CountryType = {
     alpha3Code: string;
 };
 
-export type CountryNameType = Pick<CountryType, "name">;
-
 export type CountriesType = CountryType[];
 
 export type UIComponentProp = {

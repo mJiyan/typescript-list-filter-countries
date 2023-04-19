@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { SearchIcon } from 'src/ui-library';
-import { SearchAndFilterCountriesProps } from 'src/pages/country-list/utils';
+import { UseSearchAndFilterCountriesProps } from 'src/pages/country-list/hooks/useSearchAndFilterCountries';
 
-type SearchProps = Pick<SearchAndFilterCountriesProps, "search">
+export type SearchProps = Pick<UseSearchAndFilterCountriesProps, "search">
 
 const Search: React.FC<SearchProps> = ({ search }) => {
   return (
